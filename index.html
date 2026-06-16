@@ -3,413 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>三轮车维修创业 - 专业维修服务平台 | 三轮快修</title>
-    <meta name="description" content="三轮车专业维修平台，提供电动车维修、三轮车修理、配件更换等服务。覆盖全市区，24小时上门服务，师傅持证上岗，价格透明。">
-    <meta name="keywords" content="三轮车维修,电动车维修,三轮车修理,维修师傅,配件更换,拖车服务,24小时救援">
-    <meta name="author" content="三轮快修">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://your-domain.com/">
-
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-domain.com/">
-    <meta property="og:title" content="三轮车维修创业 - 专业维修服务平台">
-    <meta property="og:description" content="专业三轮车维修服务平台，24小时上门服务，覆盖全市区。">
-    <meta property="og:locale" content="zh_CN">
-
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
-
+    <title>三轮快修 - 专业三轮车维修服务平台</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "三轮快修",
-        "description": "专业三轮车维修服务平台",
-        "url": "https://your-domain.com/",
-        "telephone": "+86-138-8888-8888",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "北京市",
-            "addressCountry": "CN"
-        },
-        "openingHours": "Mo-Su 00:00-23:59",
-        "priceRange": "¥50-¥500"
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-logo">
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
                 <span class="logo-icon">🔧</span>
                 <span class="logo-text">三轮快修</span>
             </div>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link active">首页</a>
-                <a href="services.html" class="nav-link">维修服务</a>
-                <a href="technicians.html" class="nav-link">维修师傅</a>
-                <a href="#about" class="nav-link">关于我们</a>
-            </div>
-            <div class="nav-actions">
-                <button class="btn btn-secondary" onclick="showPhone()">电话咨询</button>
-                <button class="btn btn-primary" onclick="showBooking()">立即预约</button>
+            <nav class="nav">
+                <a href="index.html">首页</a>
+                <a href="services.html">服务项目</a>
+                <a href="technicians.html">维修师傅</a>
+            </nav>
+            <div class="header-phone">
+                <span>📞</span>
+                <span>133-0224-5275</span>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>三轮车坏了？找我们就对了！</h1>
-                <p>专业三轮车维修服务平台，100+认证师傅，24小时上门服务，覆盖全市区</p>
-                <div class="hero-features">
-                    <div class="feature-item">
-                        <span class="feature-icon">⏰</span>
-                        <span>24小时响应</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🛡️</span>
-                        <span>正规认证师傅</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">💰</span>
-                        <span>价格透明</span>
-                    </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🏆</span>
-                        <span>质保30天</span>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary btn-lg" onclick="showBooking()">立即预约维修</button>
-                    <button class="btn btn-secondary btn-lg" onclick="showPhone()">电话咨询</button>
-                </div>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">5000+</span>
-                    <span class="stat-label">成功维修</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">100+</span>
-                    <span class="stat-label">认证师傅</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">4.9</span>
-                    <span class="stat-label">用户评分</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">30分钟</span>
-                    <span class="stat-label">平均到达</span>
-                </div>
+    <section class="hero-simple">
+        <div class="hero-content-simple">
+            <h1>三轮车维修<br>专业上门服务</h1>
+            <p class="hero-desc">24小时响应 · 价格透明 · 质保30天</p>
+            <div class="hero-buttons-simple">
+                <button class="btn-primary-large" onclick="showBooking()">立即预约</button>
+                <button class="btn-phone-large" onclick="showPhone()">电话咨询</button>
             </div>
         </div>
     </section>
 
-    <section class="services-preview">
-        <div class="container">
-            <h2>热门维修服务</h2>
-            <div class="service-grid">
-                <div class="service-card" onclick="bookService('轮胎维修')">
-                    <span class="service-icon">🛞</span>
+    <section class="services-simple">
+        <div class="section-container">
+            <h2 class="section-title">维修服务</h2>
+            <div class="services-grid-simple">
+                <div class="service-item" onclick="bookService('轮胎维修')">
+                    <span class="service-icon-large">🛞</span>
                     <h3>轮胎维修</h3>
-                    <p>内外胎更换、补胎、轮胎平衡</p>
-                    <span class="service-price">¥30起</span>
+                    <p>补胎换胎 · 动平衡</p>
+                    <span class="service-price-simple">¥30起</span>
                 </div>
-                <div class="service-card" onclick="bookService('刹车系统')">
-                    <span class="service-icon">🛑</span>
+                <div class="service-item" onclick="bookService('刹车系统')">
+                    <span class="service-icon-large">🛑</span>
                     <h3>刹车系统</h3>
-                    <p>刹车片更换、刹车调试、刹车油更换</p>
-                    <span class="service-price">¥40起</span>
+                    <p>刹车片 · 刹车油</p>
+                    <span class="service-price-simple">¥40起</span>
                 </div>
-                <div class="service-card" onclick="bookService('电机维修')">
-                    <span class="service-icon">⚡</span>
+                <div class="service-item" onclick="bookService('电机维修')">
+                    <span class="service-icon-large">⚡</span>
                     <h3>电机维修</h3>
-                    <p>电机检测、线圈更换、霍尔元件</p>
-                    <span class="service-price">¥80起</span>
+                    <p>电机检测 · 线圈更换</p>
+                    <span class="service-price-simple">¥80起</span>
                 </div>
-                <div class="service-card" onclick="bookService('电池维修')">
-                    <span class="service-icon">🔋</span>
+                <div class="service-item" onclick="bookService('电池维修')">
+                    <span class="service-icon-large">🔋</span>
                     <h3>电池维修</h3>
-                    <p>电池检测、修复、容量提升</p>
-                    <span class="service-price">¥100起</span>
-                </div>
-                <div class="service-card" onclick="bookService('控制器维修')">
-                    <span class="service-icon">🎛️</span>
-                    <h3>控制器维修</h3>
-                    <p>控制器更换、参数调试</p>
-                    <span class="service-price">¥120起</span>
-                </div>
-                <div class="service-card" onclick="bookService('整车调试')">
-                    <span class="service-icon">🔩</span>
-                    <h3>整车调试</h3>
-                    <p>全面检测、调试保养</p>
-                    <span class="service-price">¥50起</span>
+                    <p>电池检测 · 容量修复</p>
+                    <span class="service-price-simple">¥100起</span>
                 </div>
             </div>
-            <div class="section-footer">
-                <a href="services.html" class="view-all">查看全部服务 →</a>
-            </div>
+            <a href="services.html" class="view-more">查看全部服务 →</a>
         </div>
     </section>
 
-    <section class="how-it-works">
-        <div class="container">
-            <h2>服务流程</h2>
-            <div class="steps">
-                <div class="step">
-                    <span class="step-number">1</span>
-                    <h3>在线预约</h3>
-                    <p>填写车辆问题和地址，选择合适时间</p>
+    <section class="features-simple">
+        <div class="section-container">
+            <div class="features-grid">
+                <div class="feature-box">
+                    <span class="feature-icon-large">⏰</span>
+                    <h3>24小时服务</h3>
+                    <p>随时预约，快速响应</p>
                 </div>
-                <div class="step-arrow">→</div>
-                <div class="step">
-                    <span class="step-number">2</span>
-                    <h3>师傅联系</h3>
-                    <p>师傅电话沟通，确认故障和报价</p>
+                <div class="feature-box">
+                    <span class="feature-icon-large">🛡️</span>
+                    <h3>正规认证</h3>
+                    <p>师傅持证上岗</p>
                 </div>
-                <div class="step-arrow">→</div>
-                <div class="step">
-                    <span class="step-number">3</span>
-                    <h3>上门维修</h3>
-                    <p>师傅准时上门，专业维修</p>
+                <div class="feature-box">
+                    <span class="feature-icon-large">💰</span>
+                    <h3>价格透明</h3>
+                    <p>明码标价，无隐藏费用</p>
                 </div>
-                <div class="step-arrow">→</div>
-                <div class="step">
-                    <span class="step-number">4</span>
-                    <h3>支付评价</h3>
-                    <p>满意后支付，好评返现</p>
+                <div class="feature-box">
+                    <span class="feature-icon-large">🏆</span>
+                    <h3>质保30天</h3>
+                    <p>维修质量有保障</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="technicians-preview">
-        <div class="container">
-            <h2>明星师傅</h2>
-            <div class="technician-grid">
-                <div class="technician-card">
-                    <div class="tech-avatar">张师傅</div>
-                    <div class="tech-info">
-                        <h3>张建国</h3>
-                        <span class="tech-badge">金牌师傅</span>
-                        <div class="tech-rating">⭐ 4.9 (328单)</div>
-                        <p class="tech-desc">10年维修经验，擅长电机控制器，精修各种品牌三轮车</p>
-                        <div class="tech-tags">
-                            <span>电机维修</span>
-                            <span>控制器</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="technician-card">
-                    <div class="tech-avatar">李师傅</div>
-                    <div class="tech-info">
-                        <h3>李志明</h3>
-                        <span class="tech-badge">银牌师傅</span>
-                        <div class="tech-rating">⭐ 4.8 (256单)</div>
-                        <p class="tech-desc">8年维修经验，电池专家，提供电池修复和以旧换新</p>
-                        <div class="tech-tags">
-                            <span>电池维修</span>
-                            <span>续航提升</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="technician-card">
-                    <div class="tech-avatar">王师傅</div>
-                    <div class="tech-info">
-                        <h3>王大海</h3>
-                        <span class="tech-badge">银牌师傅</span>
-                        <div class="tech-rating">⭐ 4.7 (198单)</div>
-                        <p class="tech-desc">6年维修经验，轮胎专家，配备流动补胎设备</p>
-                        <div class="tech-tags">
-                            <span>轮胎维修</span>
-                            <span>上门补胎</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-footer">
-                <a href="technicians.html" class="view-all">查看全部师傅 →</a>
-            </div>
+    <section class="location-simple">
+        <div class="section-container">
+            <h2 class="section-title">服务范围</h2>
+            <p class="location-desc">📍 湖南省衡阳市珠晖区及周边区域</p>
+            <p class="location-note">24小时上门服务，随叫随到</p>
         </div>
     </section>
 
-    <section class="testimonials">
-        <div class="container">
-            <h2>用户好评</h2>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"早上上班发现车子胎破了，在平台预约了张师傅，30分钟就到，修得又快又好，价格也很透明！"</p>
-                    <div class="testimonial-author">—— 外卖骑手 王先生</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"电动车跑不远了，以为要换电池，李师傅检测后说是电池硫化，修复了一下又用了半年，省了不少钱！"</p>
-                    <div class="testimonial-author">—— 社区居民 张大妈</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"半夜11点车子坏在路上，抱着试试看的心态预约，没想到真有师傅接单，半小时修好，太靠谱了！"</p>
-                    <div class="testimonial-author">—— 快递小哥 刘师傅</div>
-                </div>
-            </div>
+    <section class="cta-simple">
+        <div class="section-container">
+            <h2>三轮车坏了？立即联系我们！</h2>
+            <p class="cta-phone">📞 133-0224-5275</p>
+            <button class="btn-primary-large" onclick="showBooking()">立即预约维修</button>
         </div>
     </section>
 
-    <section class="coverage">
-        <div class="container">
-            <h2>服务覆盖</h2>
-            <p class="coverage-intro">我们在全市各区都设有维修点，24小时随叫随到</p>
-            <div class="coverage-grid">
-                <div class="coverage-item">🚗 朝阳区</div>
-                <div class="coverage-item">🚗 海淀区</div>
-                <div class="coverage-item">🚗 东城区</div>
-                <div class="coverage-item">🚗 西城区</div>
-                <div class="coverage-item">🚗 丰台区</div>
-                <div class="coverage-item">🚗 石景山区</div>
-                <div class="coverage-item">🚗 通州区</div>
-                <div class="coverage-item">🚗 昌平区</div>
+    <footer class="footer-simple">
+        <div class="footer-content-simple">
+            <div class="footer-info">
+                <p>三轮快修 - 专业三轮车维修服务平台</p>
+                <p>📍 湖南省衡阳市珠晖区</p>
+                <p>📞 133-0224-5275</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="services.html">服务项目</a>
+                <a href="technicians.html">维修师傅</a>
             </div>
         </div>
-    </section>
-
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>三轮车坏了？立即预约！</h2>
-                <p>24小时服务热线：<strong>138-8888-8888</strong></p>
-                <button class="btn btn-primary btn-lg" onclick="showBooking()">在线预约维修</button>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer" id="about">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <span class="logo-icon">🔧</span>
-                        <span class="logo-text">三轮快修</span>
-                    </div>
-                    <p>专业三轮车维修服务平台<br>让维修更简单</p>
-                    <p class="footer-phone">📞 138-8888-8888</p>
-                </div>
-                <div class="footer-section">
-                    <h4>快速链接</h4>
-                    <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="services.html">维修服务</a></li>
-                        <li><a href="technicians.html">维修师傅</a></li>
-                        <li><a href="#about">关于我们</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>服务项目</h4>
-                    <ul>
-                        <li><a href="#">轮胎维修</a></li>
-                        <li><a href="#">刹车系统</a></li>
-                        <li><a href="#">电机维修</a></li>
-                        <li><a href="#">电池维修</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>联系我们</h4>
-                    <ul>
-                        <li>📍 北京市朝阳区xxx路</li>
-                        <li>📞 138-8888-8888</li>
-                        <li>⏰ 24小时服务</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2024 三轮快修. All rights reserved.</p>
-            </div>
+        <div class="footer-bottom-simple">
+            <p>© 2024 三轮快修 版权所有</p>
         </div>
     </footer>
 
     <div class="modal" id="bookingModal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('bookingModal')">&times;</span>
+        <div class="modal-content-simple">
+            <span class="modal-close" onclick="closeModal('bookingModal')">×</span>
             <h2>预约维修</h2>
             <form id="bookingForm" onsubmit="submitBooking(event)">
-                <div class="form-group">
-                    <label>您的姓名 *</label>
+                <div class="form-row">
+                    <label>姓名 *</label>
                     <input type="text" name="name" required placeholder="请输入姓名">
                 </div>
-                <div class="form-group">
-                    <label>联系电话 *</label>
+                <div class="form-row">
+                    <label>电话 *</label>
                     <input type="tel" name="phone" required placeholder="请输入手机号">
                 </div>
-                <div class="form-group">
-                    <label>所在区域 *</label>
-                    <select name="district" required>
-                        <option value="">请选择区域</option>
-                        <option value="chaoyang">朝阳区</option>
-                        <option value="haidian">海淀区</option>
-                        <option value="dongcheng">东城区</option>
-                        <option value="xicheng">西城区</option>
-                        <option value="fengtai">丰台区</option>
-                        <option value="shijingshan">石景山区</option>
-                        <option value="tongzhou">通州区</option>
-                        <option value="changping">昌平区</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>详细地址 *</label>
+                <div class="form-row">
+                    <label>地址 *</label>
                     <input type="text" name="address" required placeholder="请输入详细地址">
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <label>维修项目 *</label>
                     <select name="service" id="serviceSelect" required>
-                        <option value="">请选择服务</option>
-                        <option value="轮胎维修">轮胎维修 (¥30起)</option>
-                        <option value="刹车系统">刹车系统 (¥40起)</option>
-                        <option value="电机维修">电机维修 (¥80起)</option>
-                        <option value="电池维修">电池维修 (¥100起)</option>
-                        <option value="控制器维修">控制器维修 (¥120起)</option>
-                        <option value="整车调试">整车调试 (¥50起)</option>
+                        <option value="">请选择</option>
+                        <option value="轮胎维修">轮胎维修</option>
+                        <option value="刹车系统">刹车系统</option>
+                        <option value="电机维修">电机维修</option>
+                        <option value="电池维修">电池维修</option>
                         <option value="其他">其他故障</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <label>故障描述</label>
-                    <textarea name="description" rows="3" placeholder="请描述具体故障现象"></textarea>
+                    <textarea name="description" rows="2" placeholder="请描述故障"></textarea>
                 </div>
-                <div class="form-group">
-                    <label>预约时间</label>
-                    <select name="time">
-                        <option value="asap">尽快上门</option>
-                        <option value="morning">今天上午</option>
-                        <option value="afternoon">今天下午</option>
-                        <option value="tomorrow">明天</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">提交预约</button>
+                <button type="submit" class="btn-submit">提交预约</button>
             </form>
         </div>
     </div>
 
     <div class="modal" id="phoneModal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('phoneModal')">&times;</span>
+        <div class="modal-content-simple">
+            <span class="modal-close" onclick="closeModal('phoneModal')">×</span>
             <h2>联系电话</h2>
-            <div class="phone-number">📞 138-8888-8888</div>
-            <p class="phone-hint">24小时服务，随时拨打</p>
-            <button class="btn btn-primary btn-block" onclick="window.location.href='tel:13888888888'">立即拨打</button>
+            <div class="phone-display">133-0224-5275</div>
+            <p class="phone-note">24小时服务热线</p>
+            <button class="btn-call" onclick="window.location.href='tel:13302245275'">立即拨打</button>
         </div>
     </div>
 
     <div class="modal" id="successModal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('successModal')">&times;</span>
-            <div class="success-icon">✓</div>
+        <div class="modal-content-simple">
+            <span class="modal-close" onclick="closeModal('successModal')">×</span>
+            <div class="success-icon-simple">✓</div>
             <h2>预约成功！</h2>
-            <p>师傅将尽快联系您，请保持电话畅通</p>
-            <button class="btn btn-primary" onclick="closeModal('successModal')">确定</button>
+            <p>师傅将尽快联系您</p>
+            <button class="btn-close" onclick="closeModal('successModal')">确定</button>
         </div>
     </div>
 

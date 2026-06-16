@@ -3,626 +3,355 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>维修师傅 - 三轮快修</title>
-    <meta name="description" content="三轮车维修平台认证师傅团队，100+专业维修师傅，持证上岗，经验丰富，提供上门维修服务。">
-    <meta name="keywords" content="三轮车维修师傅,电动车维修工,维修技师,金牌师傅">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://your-domain.com/technicians.html">
-    
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔧</text></svg>">
-    
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        .technicians-page {
-            padding: 40px 0 60px;
-        }
-        .technicians-page h1 {
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            color: #1e293b;
-            margin-bottom: 8px;
-        }
-        .page-intro {
-            text-align: center;
-            color: #64748b;
-            margin-bottom: 40px;
-        }
-        .filter-bar {
-            background: white;
-            padding: 20px;
-            border-radius: 16px;
-            margin-bottom: 30px;
-            border: 1px solid #e2e8f0;
-        }
-        .filter-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            align-items: center;
-        }
-        .filter-group {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .filter-group label {
-            font-weight: 500;
-            color: #475569;
-        }
-        .filter-group select {
-            padding: 10px 16px;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            font-size: 14px;
-            outline: none;
-            cursor: pointer;
-        }
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 24px;
-        }
-        .tech-card {
-            background: white;
-            border-radius: 16px;
-            padding: 24px;
-            border: 1px solid #e2e8f0;
-            transition: all 0.3s;
-        }
-        .tech-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        }
-        .tech-header {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-        .tech-avatar-lg {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg: #fbbf24, #f59e0b);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            font-weight: 700;
-            color: #1e293b;
-            flex-shrink: 0;
-        }
-        .tech-header-info h3 {
-            font-size: 20px;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 4px;
-        }
-        .badge-gold {
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: #1e293b;
-        }
-        .badge-silver {
-            background: linear-gradient(135deg, #94a3b8, #64748b);
-            color: white;
-        }
-        .badge-bronze {
-            background: linear-gradient(135deg, #d97706, #b45309);
-            color: white;
-        }
-        .tech-badge-lg {
-            display: inline-block;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .tech-rating-lg {
-            color: #f59e0b;
-            font-size: 16px;
-            margin-bottom: 4px;
-        }
-        .tech-orders {
-            color: #64748b;
-            font-size: 14px;
-        }
-        .tech-body {
-            margin-bottom: 16px;
-        }
-        .tech-desc-lg {
-            font-size: 14px;
-            color: #475569;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-        .tech-tags-lg {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .tech-tags-lg span {
-            background: #f1f5f9;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            color: #475569;
-        }
-        .tech-footer {
-            display: flex;
-            gap: 12px;
-            padding-top: 16px;
-            border-top: 1px solid #f1f5f9;
-        }
-        .tech-footer .btn {
-            flex: 1;
-            text-align: center;
-        }
-        .stats-row {
-            display: flex;
-            gap: 16px;
-            margin-top: 12px;
-        }
-        .stat-mini {
-            flex: 1;
-            background: #f8fafc;
-            padding: 10px;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .stat-mini .value {
-            font-size: 18px;
-            font-weight: 700;
-            color: #1e293b;
-        }
-        .stat-mini .label {
-            font-size: 12px;
-            color: #64748b;
-        }
-        @media (max-width: 768px) {
-            .tech-grid {
-                grid-template-columns: 1fr;
-            }
-            .filter-row {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .filter-group {
-                flex-direction: column;
-                align-items: stretch;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-logo">
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
                 <span class="logo-icon">🔧</span>
                 <span class="logo-text">三轮快修</span>
             </div>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">首页</a>
-                <a href="services.html" class="nav-link">维修服务</a>
-                <a href="technicians.html" class="nav-link active">维修师傅</a>
-                <a href="index.html#about" class="nav-link">关于我们</a>
-            </div>
-            <div class="nav-actions">
-                <button class="btn btn-secondary" onclick="showPhone()">电话咨询</button>
-                <button class="btn btn-primary" onclick="showBooking()">立即预约</button>
+            <nav class="nav">
+                <a href="index.html">首页</a>
+                <a href="services.html">服务项目</a>
+                <a href="technicians.html">维修师傅</a>
+            </nav>
+            <div class="header-phone">
+                <span>📞</span>
+                <span>133-0224-5275</span>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <section class="technicians-page">
-        <div class="container">
-            <h1>维修师傅团队</h1>
-            <p class="page-intro">100+认证师傅，持证上岗，服务有保障</p>
+    <section class="page-hero">
+        <div class="section-container">
+            <h1 class="page-title">维修师傅团队</h1>
+            <p class="page-desc">专业认证 · 经验丰富 · 服务保障</p>
+        </div>
+    </section>
 
-            <div class="filter-bar">
-                <div class="filter-row">
-                    <div class="filter-group">
-                        <label>擅长领域:</label>
-                        <select id="skillFilter">
-                            <option value="all">全部</option>
-                            <option value="tire">轮胎维修</option>
-                            <option value="brake">刹车系统</option>
-                            <option value="motor">电机维修</option>
-                            <option value="battery">电池维修</option>
-                            <option value="controller">控制器维修</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>排序:</label>
-                        <select id="sortSelect">
-                            <option value="rating">评分最高</option>
-                            <option value="orders">订单最多</option>
-                            <option value="experience">经验最丰富</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>等级:</label>
-                        <select id="levelFilter">
-                            <option value="all">全部</option>
-                            <option value="gold">金牌师傅</option>
-                            <option value="silver">银牌师傅</option>
-                            <option value="bronze">铜牌师傅</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
+    <section class="technicians-section">
+        <div class="section-container">
             <div class="tech-grid">
                 <div class="tech-card">
-                    <div class="tech-header">
-                        <div class="tech-avatar-lg">张</div>
-                        <div class="tech-header-info">
-                            <h3>张建国</h3>
-                            <span class="tech-badge-lg badge-gold">金牌师傅</span>
-                            <div class="tech-rating-lg">⭐ 4.9</div>
-                            <div class="tech-orders">328单 | 10年经验</div>
+                    <div class="tech-avatar">张师傅</div>
+                    <div class="tech-info">
+                        <h2>张建国</h2>
+                        <span class="tech-badge">金牌师傅</span>
+                        <div class="tech-rating">⭐ 4.9分</div>
+                        <div class="tech-stats">
+                            <span>328单</span>
+                            <span>10年经验</span>
                         </div>
-                    </div>
-                    <div class="tech-body">
-                        <p class="tech-desc-lg">10年维修经验，擅长电机控制器，精修各种品牌三轮车。曾获市级维修技能大赛二等奖。</p>
-                        <div class="tech-tags-lg">
+                        <p class="tech-desc">擅长电机控制器维修，精修各种品牌三轮车</p>
+                        <div class="tech-skills">
                             <span>电机维修</span>
                             <span>控制器</span>
-                            <span>疑难杂症</span>
-                        </div>
-                        <div class="stats-row">
-                            <div class="stat-mini">
-                                <div class="value">328</div>
-                                <div class="label">完成订单</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">98%</div>
-                                <div class="label">好评率</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">30分</div>
-                                <div class="label">平均到达</div>
-                            </div>
                         </div>
                     </div>
-                    <div class="tech-footer">
-                        <button class="btn btn-secondary" onclick="showPhone()">电话咨询</button>
-                        <button class="btn btn-primary" onclick="bookTech('张建国')">预约师傅</button>
-                    </div>
+                    <button class="btn-primary-large" onclick="bookTech('张建国')">预约师傅</button>
                 </div>
 
                 <div class="tech-card">
-                    <div class="tech-header">
-                        <div class="tech-avatar-lg">李</div>
-                        <div class="tech-header-info">
-                            <h3>李志明</h3>
-                            <span class="tech-badge-lg badge-silver">银牌师傅</span>
-                            <div class="tech-rating-lg">⭐ 4.8</div>
-                            <div class="tech-orders">256单 | 8年经验</div>
+                    <div class="tech-avatar">李师傅</div>
+                    <div class="tech-info">
+                        <h2>李志明</h2>
+                        <span class="tech-badge silver">银牌师傅</span>
+                        <div class="tech-rating">⭐ 4.8分</div>
+                        <div class="tech-stats">
+                            <span>256单</span>
+                            <span>8年经验</span>
                         </div>
-                    </div>
-                    <div class="tech-body">
-                        <p class="tech-desc-lg">8年维修经验，电池专家，提供电池修复和以旧换新服务。精通各类铅酸电池和锂电池。</p>
-                        <div class="tech-tags-lg">
+                        <p class="tech-desc">电池专家，提供电池修复和以旧换新服务</p>
+                        <div class="tech-skills">
                             <span>电池维修</span>
                             <span>续航提升</span>
-                            <span>电池回收</span>
-                        </div>
-                        <div class="stats-row">
-                            <div class="stat-mini">
-                                <div class="value">256</div>
-                                <div class="label">完成订单</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">96%</div>
-                                <div class="label">好评率</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">35分</div>
-                                <div class="label">平均到达</div>
-                            </div>
                         </div>
                     </div>
-                    <div class="tech-footer">
-                        <button class="btn btn-secondary" onclick="showPhone()">电话咨询</button>
-                        <button class="btn btn-primary" onclick="bookTech('李志明')">预约师傅</button>
-                    </div>
+                    <button class="btn-primary-large" onclick="bookTech('李志明')">预约师傅</button>
                 </div>
 
                 <div class="tech-card">
-                    <div class="tech-header">
-                        <div class="tech-avatar-lg">王</div>
-                        <div class="tech-header-info">
-                            <h3>王大海</h3>
-                            <span class="tech-badge-lg badge-silver">银牌师傅</span>
-                            <div class="tech-rating-lg">⭐ 4.7</div>
-                            <div class="tech-orders">198单 | 6年经验</div>
+                    <div class="tech-avatar">王师傅</div>
+                    <div class="tech-info">
+                        <h2>王大海</h2>
+                        <span class="tech-badge silver">银牌师傅</span>
+                        <div class="tech-rating">⭐ 4.7分</div>
+                        <div class="tech-stats">
+                            <span>198单</span>
+                            <span>6年经验</span>
                         </div>
-                    </div>
-                    <div class="tech-body">
-                        <p class="tech-desc-lg">6年维修经验，轮胎专家，配备流动补胎设备。擅长真空胎修补和高压轮胎处理。</p>
-                        <div class="tech-tags-lg">
+                        <p class="tech-desc">轮胎专家，配备流动补胎设备</p>
+                        <div class="tech-skills">
                             <span>轮胎维修</span>
                             <span>上门补胎</span>
-                            <span>流动服务</span>
-                        </div>
-                        <div class="stats-row">
-                            <div class="stat-mini">
-                                <div class="value">198</div>
-                                <div class="label">完成订单</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">97%</div>
-                                <div class="label">好评率</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">25分</div>
-                                <div class="label">平均到达</div>
-                            </div>
                         </div>
                     </div>
-                    <div class="tech-footer">
-                        <button class="btn btn-secondary" onclick="showPhone()">电话咨询</button>
-                        <button class="btn btn-primary" onclick="bookTech('王大海')">预约师傅</button>
-                    </div>
+                    <button class="btn-primary-large" onclick="bookTech('王大海')">预约师傅</button>
                 </div>
 
                 <div class="tech-card">
-                    <div class="tech-header">
-                        <div class="tech-avatar-lg">赵</div>
-                        <div class="tech-header-info">
-                            <h3>赵志刚</h3>
-                            <span class="tech-badge-lg badge-bronze">铜牌师傅</span>
-                            <div class="tech-rating-lg">⭐ 4.6</div>
-                            <div class="tech-orders">145单 | 5年经验</div>
+                    <div class="tech-avatar">赵师傅</div>
+                    <div class="tech-info">
+                        <h2>赵志刚</h2>
+                        <span class="tech-badge bronze">铜牌师傅</span>
+                        <div class="tech-rating">⭐ 4.6分</div>
+                        <div class="tech-stats">
+                            <span>145单</span>
+                            <span>5年经验</span>
                         </div>
-                    </div>
-                    <div class="tech-body">
-                        <p class="tech-desc-lg">5年维修经验，刹车系统专家。擅长碟刹、鼓刹调试，刹车性能优化。</p>
-                        <div class="tech-tags-lg">
+                        <p class="tech-desc">刹车系统专家，擅长碟刹鼓刹调试</p>
+                        <div class="tech-skills">
                             <span>刹车系统</span>
-                            <span>碟刹调试</span>
                             <span>安全检测</span>
                         </div>
-                        <div class="stats-row">
-                            <div class="stat-mini">
-                                <div class="value">145</div>
-                                <div class="label">完成订单</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">95%</div>
-                                <div class="label">好评率</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">40分</div>
-                                <div class="label">平均到达</div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="tech-footer">
-                        <button class="btn btn-secondary" onclick="showPhone()">电话咨询</button>
-                        <button class="btn btn-primary" onclick="bookTech('赵志刚')">预约师傅</button>
-                    </div>
+                    <button class="btn-primary-large" onclick="bookTech('赵志刚')">预约师傅</button>
                 </div>
 
                 <div class="tech-card">
-                    <div class="tech-header">
-                        <div class="tech-avatar-lg">刘</div>
-                        <div class="tech-header-info">
-                            <h3>刘伟</h3>
-                            <span class="tech-badge-lg badge-silver">银牌师傅</span>
-                            <div class="tech-rating-lg">⭐ 4.8</div>
-                            <div class="tech-orders">278单 | 9年经验</div>
+                    <div class="tech-avatar">刘师傅</div>
+                    <div class="tech-info">
+                        <h2>刘伟</h2>
+                        <span class="tech-badge silver">银牌师傅</span>
+                        <div class="tech-rating">⭐ 4.8分</div>
+                        <div class="tech-stats">
+                            <span>278单</span>
+                            <span>9年经验</span>
                         </div>
-                    </div>
-                    <div class="tech-body">
-                        <p class="tech-desc-lg">9年维修经验，全能型师傅。各类三轮车、电动车维修都能搞定，口碑极佳。</p>
-                        <div class="tech-tags-lg">
+                        <p class="tech-desc">全能型师傅，各类三轮车维修都能搞定</p>
+                        <div class="tech-skills">
                             <span>整车维修</span>
                             <span>综合维修</span>
-                            <span>新车调试</span>
-                        </div>
-                        <div class="stats-row">
-                            <div class="stat-mini">
-                                <div class="value">278</div>
-                                <div class="label">完成订单</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">97%</div>
-                                <div class="label">好评率</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">30分</div>
-                                <div class="label">平均到达</div>
-                            </div>
                         </div>
                     </div>
-                    <div class="tech-footer">
-                        <button class="btn btn-secondary" onclick="showPhone()">电话咨询</button>
-                        <button class="btn btn-primary" onclick="bookTech('刘伟')">预约师傅</button>
-                    </div>
+                    <button class="btn-primary-large" onclick="bookTech('刘伟')">预约师傅</button>
                 </div>
 
                 <div class="tech-card">
-                    <div class="tech-header">
-                        <div class="tech-avatar-lg">陈</div>
-                        <div class="tech-header-info">
-                            <h3>陈国强</h3>
-                            <span class="tech-badge-lg badge-bronze">铜牌师傅</span>
-                            <div class="tech-rating-lg">⭐ 4.5</div>
-                            <div class="tech-orders">112单 | 4年经验</div>
+                    <div class="tech-avatar">陈师傅</div>
+                    <div class="tech-info">
+                        <h2>陈国强</h2>
+                        <span class="tech-badge bronze">铜牌师傅</span>
+                        <div class="tech-rating">⭐ 4.5分</div>
+                        <div class="tech-stats">
+                            <span>112单</span>
+                            <span>4年经验</span>
                         </div>
-                    </div>
-                    <div class="tech-body">
-                        <p class="tech-desc-lg">4年维修经验，年轻有活力，上门速度快。专长控制器编程和参数调试。</p>
-                        <div class="tech-tags-lg">
+                        <p class="tech-desc">年轻有活力，上门速度快</p>
+                        <div class="tech-skills">
                             <span>控制器</span>
-                            <span>限速调试</span>
                             <span>速度快</span>
                         </div>
-                        <div class="stats-row">
-                            <div class="stat-mini">
-                                <div class="value">112</div>
-                                <div class="label">完成订单</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">94%</div>
-                                <div class="label">好评率</div>
-                            </div>
-                            <div class="stat-mini">
-                                <div class="value">20分</div>
-                                <div class="label">平均到达</div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="tech-footer">
-                        <button class="btn btn-secondary" onclick="showPhone()">电话咨询</button>
-                        <button class="btn btn-primary" onclick="bookTech('陈国强')">预约师傅</button>
-                    </div>
+                    <button class="btn-primary-large" onclick="bookTech('陈国强')">预约师傅</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>成为认证师傅，加入我们！</h2>
-                <p>灵活的工作时间，丰厚的收入分成</p>
-                <button class="btn btn-primary btn-lg" onclick="showPhone()">联系我们</button>
-            </div>
+    <section class="cta-simple">
+        <div class="section-container">
+            <h2>成为认证师傅，加入我们！</h2>
+            <p class="cta-phone">📞 133-0224-5275</p>
+            <button class="btn-primary-large" onclick="showPhone()">联系我们</button>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <span class="logo-icon">🔧</span>
-                        <span class="logo-text">三轮快修</span>
-                    </div>
-                    <p>专业三轮车维修服务平台<br>让维修更简单</p>
-                    <p class="footer-phone">📞 138-8888-8888</p>
-                </div>
-                <div class="footer-section">
-                    <h4>快速链接</h4>
-                    <ul>
-                        <li><a href="index.html">首页</a></li>
-                        <li><a href="services.html">维修服务</a></li>
-                        <li><a href="technicians.html">维修师傅</a></li>
-                        <li><a href="index.html#about">关于我们</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>服务项目</h4>
-                    <ul>
-                        <li><a href="#">轮胎维修</a></li>
-                        <li><a href="#">刹车系统</a></li>
-                        <li><a href="#">电机维修</a></li>
-                        <li><a href="#">电池维修</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>联系我们</h4>
-                    <ul>
-                        <li>📍 北京市朝阳区xxx路</li>
-                        <li>📞 138-8888-8888</li>
-                        <li>⏰ 24小时服务</li>
-                    </ul>
-                </div>
+    <footer class="footer-simple">
+        <div class="footer-content-simple">
+            <div class="footer-info">
+                <p>三轮快修 - 专业三轮车维修服务平台</p>
+                <p>📍 湖南衡阳珠晖区</p>
+                <p>📞 133-0224-5275</p>
             </div>
-            <div class="footer-bottom">
-                <p>© 2024 三轮快修. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="index.html">首页</a>
+                <a href="services.html">服务项目</a>
+                <a href="technicians.html">维修师傅</a>
             </div>
+        </div>
+        <div class="footer-bottom-simple">
+            <p>© 2024 三轮快修 版权所有</p>
         </div>
     </footer>
 
     <div class="modal" id="bookingModal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('bookingModal')">&times;</span>
+        <div class="modal-content-simple">
+            <span class="modal-close" onclick="closeModal('bookingModal')">×</span>
             <h2>预约维修</h2>
             <form id="bookingForm" onsubmit="submitBooking(event)">
-                <div class="form-group">
-                    <label>您的姓名 *</label>
+                <div class="form-row">
+                    <label>姓名 *</label>
                     <input type="text" name="name" required placeholder="请输入姓名">
                 </div>
-                <div class="form-group">
-                    <label>联系电话 *</label>
+                <div class="form-row">
+                    <label>电话 *</label>
                     <input type="tel" name="phone" required placeholder="请输入手机号">
                 </div>
-                <div class="form-group">
-                    <label>所在区域 *</label>
-                    <select name="district" required>
-                        <option value="">请选择区域</option>
-                        <option value="chaoyang">朝阳区</option>
-                        <option value="haidian">海淀区</option>
-                        <option value="dongcheng">东城区</option>
-                        <option value="xicheng">西城区</option>
-                        <option value="fengtai">丰台区</option>
-                        <option value="shijingshan">石景山区</option>
-                        <option value="tongzhou">通州区</option>
-                        <option value="changping">昌平区</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>详细地址 *</label>
+                <div class="form-row">
+                    <label>地址 *</label>
                     <input type="text" name="address" required placeholder="请输入详细地址">
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <label>维修项目 *</label>
                     <select name="service" id="serviceSelect" required>
-                        <option value="">请选择服务</option>
-                        <option value="轮胎维修">轮胎维修 (¥30起)</option>
-                        <option value="刹车系统">刹车系统 (¥40起)</option>
-                        <option value="电机维修">电机维修 (¥80起)</option>
-                        <option value="电池维修">电池维修 (¥100起)</option>
-                        <option value="控制器维修">控制器维修 (¥120起)</option>
-                        <option value="整车调试">整车调试 (¥50起)</option>
+                        <option value="">请选择</option>
+                        <option value="轮胎维修">轮胎维修</option>
+                        <option value="刹车系统">刹车系统</option>
+                        <option value="电机维修">电机维修</option>
+                        <option value="电池维修">电池维修</option>
+                        <option value="控制器维修">控制器维修</option>
+                        <option value="整车调试">整车调试</option>
                         <option value="其他">其他故障</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-row">
                     <label>故障描述</label>
-                    <textarea name="description" rows="3" placeholder="请描述具体故障现象"></textarea>
+                    <textarea name="description" rows="2" placeholder="请描述故障"></textarea>
                 </div>
-                <div class="form-group">
-                    <label>预约时间</label>
-                    <select name="time">
-                        <option value="asap">尽快上门</option>
-                        <option value="morning">今天上午</option>
-                        <option value="afternoon">今天下午</option>
-                        <option value="tomorrow">明天</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">提交预约</button>
+                <button type="submit" class="btn-submit">提交预约</button>
             </form>
         </div>
     </div>
 
     <div class="modal" id="phoneModal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('phoneModal')">&times;</span>
+        <div class="modal-content-simple">
+            <span class="modal-close" onclick="closeModal('phoneModal')">×</span>
             <h2>联系电话</h2>
-            <div class="phone-number">📞 138-8888-8888</div>
-            <p class="phone-hint">24小时服务，随时拨打</p>
-            <button class="btn btn-primary btn-block" onclick="window.location.href='tel:13888888888'">立即拨打</button>
+            <div class="phone-display">133-0224-5275</div>
+            <p class="phone-note">24小时服务热线</p>
+            <button class="btn-call" onclick="window.location.href='tel:13302245275'">立即拨打</button>
         </div>
     </div>
 
     <div class="modal" id="successModal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal('successModal')">&times;</span>
-            <div class="success-icon">✓</div>
+        <div class="modal-content-simple">
+            <span class="modal-close" onclick="closeModal('successModal')">×</span>
+            <div class="success-icon-simple">✓</div>
             <h2>预约成功！</h2>
-            <p>师傅将尽快联系您，请保持电话畅通</p>
-            <button class="btn btn-primary" onclick="closeModal('successModal')">确定</button>
+            <p>师傅将尽快联系您</p>
+            <button class="btn-close" onclick="closeModal('successModal')">确定</button>
         </div>
     </div>
 
+    <style>
+        .technicians-section {
+            background: #fff;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .tech-card {
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .tech-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 auto 20px;
+        }
+        
+        .tech-info h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .tech-badge {
+            display: inline-block;
+            background: #f39c12;
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .tech-badge.silver {
+            background: #95a5a6;
+        }
+        
+        .tech-badge.bronze {
+            background: #d35400;
+        }
+        
+        .tech-rating {
+            font-size: 16px;
+            color: #f39c12;
+            margin-bottom: 10px;
+        }
+        
+        .tech-stats {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        
+        .tech-desc {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .tech-skills {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .tech-skills span {
+            background: #ecf0f1;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 992px) {
+            .tech-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
     <script src="script.js"></script>
+    <script>
+        function bookTech(name) {
+            showBooking();
+        }
+    </script>
 </body>
 </html>
